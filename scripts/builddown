@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+"""
+Compile a Markdown file to PDF using Pandoc + XeLaTeX.
+
+Author:
+    Dr Jesús Rubio
+    jesus@rubiojimenez.com
+
+Created:
+    December 2025
+
+Usage:
+    builddown file.md
+"""
+
+import subprocess
+import sys
+from pathlib import Path
+
+
+def main() -> None:
+    if len(sys.argv) != 2:
+        print("Usage: builddown file.md", file=sys.stderr)
+        sys.exit(1)
+
+    src = Path(sys.argv[1])
+
+    if src.suffix != ".md":
+        print("Error: input file must have .md extension", file=sys.stderr)
+        sys.exit(1)
+
+    if not src.is_file():
+        print(f"Error: file not found: {src}", file=sys.stderr)
+        sys.exit(1)
+
+    out = src.with_suffix(".pdf")
+
+    try:
+        subprocess.run(
+            ["pandoc", src, "-o", out, "--pdf-engine=xelatex"],
+            check=True,
+        )
+    except FileNotFoundError:
+        print("Error: pandoc not found on PATH", file=sys.stderr)
+        sys.exit(127)
+    except subprocess.CalledProcessError as exc:
+        print("Error: pandoc failed. See message above.", file=sys.stderr)
+        print("Hint: check that XeLaTeX is installed and on PATH.", file=sys.stderr)
+        sys.exit(exc.returncode)
+
+    print(f"Built {out}")
+
+
+if __name__ == "__main__":
+    main()
