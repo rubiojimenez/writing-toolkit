@@ -21,5 +21,4 @@ for ext in $EXTENSIONS; do
 done
 
 # Auxiliary files to be deleted; add more as needed
-file=(*Notes.bib)
-[ -f "${file[0]}" ] && rm "${file[0]}"
+find . -type f -name "*Notes.bib" -exec rm -f {} +
