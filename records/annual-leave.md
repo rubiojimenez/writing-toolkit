@@ -11,7 +11,7 @@ fontsize: 12pt
 
 ## Academic year 20XX/20XX
 
-- DD Month YYYY
-- DD–DD Month YYYY
+- DD/MM/YYYY
+- DD/MM/YYYY – DD/MM/YYYY
 
 **Total:** X
