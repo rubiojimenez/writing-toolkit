@@ -14,7 +14,9 @@ Modified: December 2025
 
 # Abstracts log
 
-## Title of abstract 1
+**Speaker:** 
+
+### Title of abstract 1
 
 **Abstract:**  
 Full abstract text goes here.
@@ -22,7 +24,7 @@ Full abstract text goes here.
 **Event:**  
 **Date submitted:** DD/MM/YYYY
 
-## Title of abstract 2
+### Title of abstract 2
 
 **Abstract:**  
 Full abstract text goes here.
