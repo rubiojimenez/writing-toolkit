@@ -7,6 +7,14 @@ header-includes:
   - \AtBeginEnvironment{longtable}{\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}}
 ---
 
+<!--
+Dr Jesús Rubio
+jesus@rubiojimenez.com
+
+Created: December 2025
+Modified: --
+-->
+
 # Annual leave log
 
 **Employee**:  
