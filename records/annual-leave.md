@@ -2,16 +2,22 @@
 geometry: margin=3cm
 mainfont: Helvetica
 fontsize: 12pt
+header-includes:
+  - \usepackage{etoolbox}
+  - \AtBeginEnvironment{longtable}{\setlength{\LTleft}{0pt}\setlength{\LTright}{\fill}}
 ---
 
 # Annual leave log
 
-**Dr Jesús Rubio**  
-<jesus@rubiojimenez.com>
+**Employee**:  
+**Organisation**:
+
+_Days = working days only._
 
 ## Academic year 20XX/20XX
 
-- DD/MM/YYYY
-- DD/MM/YYYY – DD/MM/YYYY
+| From       | To         | Days |
+|------------|------------|------|
+| DD/MM/YYYY | DD/MM/YYYY | 1    |
 
-**Total:** X
+**Total used:** X days
