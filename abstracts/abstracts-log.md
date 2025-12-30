@@ -1,31 +1,31 @@
+---
+geometry: margin=3cm
+mainfont: Helvetica
+fontsize: 12pt
+---
+
 <!--
 Dr Jesús Rubio
 jesus@rubiojimenez.com
 
 Created: November 2025
-Modified: --
+Modified: December 2025
 -->
 
 # Abstracts log
 
----
+## Title of abstract 1
 
-**Title:**
+**Abstract:**  
+Full abstract text goes here.
 
-**Abstract:** 
+**Event:**  
+**Date submitted:** DD/MM/YYYY
 
-**Submitted to:** 
+## Title of abstract 2
 
-**Date:**
+**Abstract:**  
+Full abstract text goes here.
 
----
-
-**Title:**
-
-**Abstract:** 
-
-**Submitted to:** 
-
-**Date:**
-
----
+**Event:**  
+**Date submitted:** DD/MM/YYYY
