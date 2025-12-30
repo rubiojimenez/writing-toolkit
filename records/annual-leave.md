@@ -17,8 +17,8 @@ Modified: --
 
 # Annual leave log
 
-**Employee**:  
-**Organisation**:
+**Employee:**  
+**Organisation:**
 
 _Days = working days only._
 
