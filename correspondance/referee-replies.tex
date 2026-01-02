@@ -1,52 +1,91 @@
 % Author: Jesús Rubio
 % Email: jesus@rubiojimenez.com
 % Created: 2024-01
-% Modified: 2025-06
+% Modified: 2026-01
 
-\documentclass{article}
+\documentclass[a4paper,11pt]{article}
 
-\usepackage[a4paper,top=2cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage[
+  top=2cm,
+  bottom=2.5cm,
+  left=2.5cm,
+  right=2.5cm
+]{geometry}
 \usepackage[british]{babel}
-\usepackage{amsmath}
-\usepackage{amssymb}
+
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{amsmath,amssymb,mathtools}
 \usepackage{graphicx}
-\usepackage{mathtools}
-\usepackage{cite}
 \usepackage{xcolor}
 \usepackage{ragged2e}
+\usepackage{cite}
 
-\renewcommand{\familydefault}{\sfdefault}
-\definecolor{mydarkblue}{RGB}{0, 51, 102} 
-\newcommand{\referee}[1]{\noindent\fcolorbox{mydarkblue}{white}{\parbox[c]{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{\textcolor{mydarkblue}{\itshape #1}}}}
+\definecolor{myblue}{RGB}{0,51,102}
 
-% Replies
+\newcommand{\referee}[1]{%
+  \noindent\fcolorbox{black}{white}{%
+    \parbox[c]{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+      \textcolor{black}{\itshape #1}%
+    }%
+  }%
+}
+
+\newcommand{\reply}[1]{%
+  \begin{flushleft}\justify
+    \textcolor{myblue}{\textbf{Reply:}} #1
+  \end{flushleft}
+}
+
+\newcommand{\changes}[1]{%
+  \begin{flushleft}\justify
+    \textcolor{myblue}{\textbf{Changes:}} #1
+  \end{flushleft}
+}
+
 \begin{document}
 
 \begin{center}
-    \textbf{Replies to referee reports for manuscript \dots}
+  \textbf{Replies to referee reports for manuscript \dots}
 \end{center}
 
-% Referee 1
 \begin{center}
-    \textbf{Comments by referee 1}
+  \textbf{Referee 1}
 \end{center}
 
-% Comment 
 \referee{\dots}
 
-% Reply
-\begin{flushleft}\justify
-\textbf{Reply:} \dots
-\end{flushleft}
+\reply{\dots}
 
-\begin{flushleft}\justify
-\textbf{Changes:} \dots
-\end{flushleft}
+\changes{\dots}
 
 \bigskip
 
-% References
-%\bibliographystyle{ieeetr}
-%\bibliography{}
+\referee{\dots}
+
+\reply{\dots}
+
+\changes{\dots}
+
+\newpage
+
+\begin{center}
+  \textbf{Referee 2}
+\end{center}
+
+\referee{\dots}
+
+\reply{\dots}
+
+\changes{\dots}
+
+\bigskip
+
+\referee{\dots}
+
+\reply{\dots}
+
+\changes{\dots}
 
 \end{document}

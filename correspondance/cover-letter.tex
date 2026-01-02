@@ -1,113 +1,94 @@
 % Author: Jesús Rubio
 % Email: jesus@rubiojimenez.com
-% Created: 2022-11
+% Created: 2024-01
 % Modified: 2026-01
 
-\documentclass[12pt]{article}
+\documentclass[a4paper,11pt]{article}
 
-% Core
 \usepackage[
-    a4paper,
-    left=3cm,
-    right=3cm,
-    top=3cm,
-    bottom=3cm
+  top=2cm,
+  bottom=2.5cm,
+  left=2.5cm,
+  right=2.5cm
 ]{geometry}
 \usepackage[british]{babel}
 
-% Text
 \usepackage[scaled=0.95]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0.45em}
 
-% Visual
+\usepackage{amsmath,amssymb,mathtools}
 \usepackage{graphicx}
-\usepackage{marvosym}
 \usepackage{xcolor}
-\definecolor{myblue}{RGB}{34,31,150}
-\definecolor{mygrey}{RGB}{105,105,105}
-\newcommand*{\headcolor}[1]{%
-    \textcolor{mygrey}{#1}%
+\usepackage{ragged2e}
+\usepackage{cite}
+
+\definecolor{myblue}{RGB}{0,51,102}
+
+\newcommand{\referee}[1]{%
+  \noindent\fcolorbox{black}{white}{%
+    \parbox[c]{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+      \textcolor{black}{\itshape #1}%
+    }%
+  }%
 }
 
-\usepackage[
-    colorlinks=true,
-    linkcolor=myblue,
-    urlcolor=myblue,
-    breaklinks=true
-]{hyperref}
-
-% Header
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\footrulewidth}{0.4pt}
-
-\newcommand{\MyWebsiteURL}{https://yourdomain.yourtld}
-\newcommand{\MyWebsiteText}{yourdomain.yourtld}
-\newcommand{\MyEmail}{yourusername@yourdomain.yourtld}
-
-\chead{%
-  \Mundus\, \href{\MyWebsiteURL}{\MyWebsiteText}%
-  \,\textbar\,
-  \Letter\, \href{mailto:\MyEmail}{\MyEmail}%
-  \smallskip
+\newcommand{\reply}[1]{%
+  \begin{flushleft}\justify
+    \textcolor{myblue}{\textbf{Reply:}} #1
+  \end{flushleft}
 }
 
-% Letter
+\newcommand{\changes}[1]{%
+  \begin{flushleft}\justify
+    \textcolor{myblue}{\textbf{Changes:}} #1
+  \end{flushleft}
+}
+
 \begin{document}
 
-\bigskip
+\begin{center}
+  \textbf{Replies to referee reports for manuscript \dots}
+\end{center}
 
-\begin{flushright}
-\textbf{Your name}\\
-Address line\\
-City or town\\
-Post code\\
-Country
-\end{flushright}
+\begin{center}
+  \textbf{Referee 1}
+\end{center}
 
-\medskip
+\referee{\dots}
 
-\today
+\reply{\dots}
 
-\medskip
-
-\textbf{Addressee}\\
-Address line\\
-City or town\\
-Post code\\
-Country
+\changes{\dots}
 
 \bigskip
 
-\textbf{Position: name of the position}
+\referee{\dots}
+
+\reply{\dots}
+
+\changes{\dots}
+
+\begin{center}
+  \textbf{Referee 2}
+\end{center}
+
+\referee{\dots}
+
+\reply{\dots}
+
+\changes{\dots}
 
 \bigskip
 
-Dear Addressee,
+\referee{\dots}
 
-I am writing to apply for \dots
+\reply{\dots}
 
-\dots
-
-\medskip
-
-I look forward to the opportunity of further discussing my application.
-Many thanks for your time.
-
-\medskip
-
-Yours sincerely,
+\changes{\dots}
 
 \bigskip
 
-% Handwritten signature
-%\includegraphics[width=7cm]{signature}
-
-\bigskip
-
-Your name
+% \bibliographystyle{ieeetr}
+% \bibliography{}
 
 \end{document}
