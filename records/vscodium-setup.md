@@ -5,10 +5,9 @@ fontsize: 12pt
 ---
 
 <!--
-Jesús Rubio
-jesus@rubiojimenez.com
-
-Modified: January 2026
+Author: Jesús Rubio
+Email: jesus@rubiojimenez.com
+Modified: 2026-01
 -->
 
 # A personal VSCodium configuration

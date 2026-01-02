@@ -1,12 +1,10 @@
 #!/bin/bash
+# Author: Jesús Rubio
+# Email: jesus@rubiojimenez.com
+# Created: 2024-02
+# Modified: 2026-01
 
 # Script to clean LaTeX auxiliary files for arXiv submissions
-
-# Dr Jesús Rubio
-# jesus@rubiojimenez.com
-
-# Created: February 2024
-# Last modified: December 2025
 
 # Extensions to be deleted; add more as needed
 delete_files() {

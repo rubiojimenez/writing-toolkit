@@ -1,12 +1,10 @@
 #!/bin/bash
+# Author: Jesús Rubio
+# Email: jesus@rubiojimenez.com
+# Created: 2024-07
+# Modified: 2026-01
 
 # Script to compile LaTeX documents
-
-# Dr Jesús Rubio
-# jesus@rubiojimenez.com
-
-# Created: July 2024
-# Last modified: December 2025
 
 # Basic checks
 if [ $# -eq 0 ]; then
@@ -37,7 +35,7 @@ pdflatex -interaction=nonstopmode -halt-on-error "$filename" > /dev/null
 pdflatex -interaction=nonstopmode -halt-on-error "$filename" > /dev/null
 pdflatex -interaction=nonstopmode -halt-on-error "$filename" > /dev/null
 
-# Final compilation status
+# Compilation status
 if [ $? -eq 0 ]; then
     echo "Build successful."
 else

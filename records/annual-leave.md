@@ -8,11 +8,10 @@ header-includes:
 ---
 
 <!--
-Dr Jesús Rubio
-jesus@rubiojimenez.com
-
-Created: December 2025
-Modified: --
+Author: Jesús Rubio
+Email: jesus@rubiojimenez.com
+Created: 2025-12
+Modified: 2026-01
 -->
 
 # Annual leave log

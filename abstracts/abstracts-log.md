@@ -5,11 +5,10 @@ fontsize: 12pt
 ---
 
 <!--
-Dr Jesús Rubio
-jesus@rubiojimenez.com
-
-Created: November 2025
-Modified: December 2025
+Author: Jesús Rubio
+Email: jesus@rubiojimenez.com
+Created: 2025-11
+Modified: 2026-01
 -->
 
 # Abstracts log
