@@ -1,121 +1,134 @@
 % Author: Jesús Rubio
 % Email: jesus@rubiojimenez.com
 % Created: 2024-01
-% Modified: 2026-01 
+% Modified: 2026-01
 
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage[a4paper, total={7in, 9in}]{geometry}
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[margin=3cm]{geometry}
 \usepackage{hyperref}
 
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% Usage of \TalkAbstract:
+%   #1  Talk title
+%   #2  Author line (names with affiliation markers)
+%   #3  Affiliations
+%   #4  Abstract text
+%   #5  Reference or citation
+
+\newcommand{\TalkAbstract}[5]{%
+  \textbf{#1}\par
+  \vspace{0.3cm}%
+
+  #2\par
+  \vspace{0.3cm}%
+
+  {\small #3}\par
+  \vspace{0.3cm}%
+
+  #4\par
+  \vspace{0.3cm}%
+
+  {\footnotesize #5}\par
+  \vspace{0.5cm}%
+}
+
 \begin{document}
-\thispagestyle{empty}
 
-% Event details
 \begin{center}
-\Large \textsc{[Your event title]}\\
-\emph{[Your event subtitle]}
+\Large \textsc{Event title}\\
+\emph{Event subtitle}
 \end{center}
 \vspace{0.1cm}
 
 \begin{center}
-\large 
-[Location]\\ [5pt]
-[Date]
+\large
+Location\\[5pt]
+Date
 \end{center}
 \vspace{0.1cm}
 
 \begin{center}
-\large [Entity organising the event]
+\large Organisation
 \end{center}
 \vspace{0.5cm}
 
-% Schedule
 \begin{center}
-\begin{tabular}{ |c||c|} 
+\begin{tabular}{ |c||c| }
 \hline
-X:XX - X:XX & \begin{tabular}{@{}c@{}} [Introduction] \end{tabular} \\ 
-\hline 
-\hline
-X:XX - X:XX & \begin{tabular}{@{}c@{}} \textbf{[Speaker$\,$1]} \\{}[Talk$\,$1] \end{tabular} \\
-\hline
-\hline
-X:XX - X:XX & \begin{tabular}{@{}c@{}} \textbf{[Speaker$\,$2]} \\{}[Talk$\,$2] \end{tabular} \\
+X:XX -- X:XX &
+  \begin{tabular}{@{}c@{}}
+    Introduction
+  \end{tabular} \\
 \hline
 \hline
-X:XX - X:XX & \multicolumn{1}{|c|}{ [Coffee break/lunch/dinner] } \\
+X:XX -- X:XX &
+  \begin{tabular}{@{}c@{}}
+    \textbf{Speaker 1} \\
+    Talk 1
+  \end{tabular} \\
 \hline
 \hline
-X:XX - X:XX & \begin{tabular}{@{}c@{}} \textbf{[Speaker$\,$3]} \\{}[Talk$\,$3] \end{tabular} \\
+X:XX -- X:XX &
+  \begin{tabular}{@{}c@{}}
+    \textbf{Speaker 2} \\
+    Talk 2
+  \end{tabular} \\
 \hline
 \hline
-X:XX - X:XX & \begin{tabular}{@{}c@{}} \textbf{[Speaker$\,$4]} \\{}[Talk$\,$4] \end{tabular} \\
+X:XX -- X:XX &
+  \multicolumn{1}{|c|}{Coffee break / lunch / dinner} \\
+\hline
+\hline
+X:XX -- X:XX &
+  \begin{tabular}{@{}c@{}}
+    \textbf{Speaker 3} \\
+    Talk 3
+  \end{tabular} \\
+\hline
+\hline
+X:XX -- X:XX &
+  \begin{tabular}{@{}c@{}}
+    \textbf{Speaker 4} \\
+    Talk 4
+  \end{tabular} \\
 \hline
 \end{tabular}
 \end{center}
 
-% Abstracts
 \newpage
 \begin{center}
-    \large \textbf{Abstracts}
+\large \textbf{Abstracts}
 \end{center}
 \vspace{0.3cm}
 
-% Abstract 1
-\begin{flushleft}
-    \textbf{[Talk 1]}
-    \vspace{0.3cm}
+\TalkAbstract
+  {Talk 1}
+  {\underline{Corresponding author}$^{1}$, Another author$^{2}$}
+  {$^{1}$Affiliation\\$^{2}$Another affiliation}
+  {Abstract text}
+  {Author 1, Author 2, et al., \emph{Title}, Journal reference, Year}
 
-    \smash{\underline{[Corresponding author]}},$^{1}$
-    [Another author]$^2$\\
-    \vspace{0.3cm}
+\TalkAbstract
+  {Talk 2}
+  {Corresponding author$^{1}$, Another author$^{2}$}
+  {$^{1}$Affiliation\\$^{2}$Another affiliation}
+  {Abstract text}
+  {Author 1, Author 2, et al., \emph{Title}, Journal reference, Year}
 
-    \small  
-    $^1$[Affiliation]\\
-    $^2$[Another affiliation]
-    \normalsize
-    \vspace{0.3cm}
-    
-    [Abstract]
-    \vspace{0.3cm}
-    
-    \footnotesize
-    [Author$\,$1, Author$\,$2, \dots,  \emph{Title}, Journal reference, (Year)]\\
-\end{flushleft} 
-\vspace{0.5cm}
-
-% Abstract 2
-\begin{flushleft}
-    \textbf{[Talk 2]}
-    \vspace{0.3cm}
-
-    [Corresponding author], $^{1}$
-    [Another author]$^2$\\
-    \vspace{0.3cm}
-
-    \small  
-    $^1$[Affiliation]\\
-    $^2$[Another affiliation]
-    \normalsize
-    \vspace{0.3cm}
-    
-    [Abstract]
-    \vspace{0.3cm}
-    
-    \footnotesize
-    [Author$\,$1, Author$\,$2, \dots,  \emph{Title}, Journal reference, (Year)]\\
-\end{flushleft} 
-\vspace{0.5cm}
-
-% Organisers
 \begin{center}
-    \large \textbf{Organising committee}
-    \vspace{0.3cm}
-    \normalsize
-    
-    Organiser 1 \\[3pt]
-    Organiser 2 \\[3pt]
-    Organiser 3
+\large \textbf{Organising committee}
+\vspace{0.3cm}
+
+\normalsize
+Organiser 1\\[3pt]
+Organiser 2\\[3pt]
+Organiser 3
 \end{center}
 
 \end{document}

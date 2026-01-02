@@ -2,79 +2,60 @@
 % Email: jesus@rubiojimenez.com
 % Modified: 2026-01
 
-\documentclass[a4paper, 11pt]{article}
-\usepackage[margin=3cm, top=2.5cm]{geometry}
+\documentclass[a4paper,11pt]{article}
 
-\usepackage{helvet} % font
+\usepackage[margin=3cm,top=2.5cm]{geometry}
+
+\usepackage[scaled]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
-\usepackage{setspace} % line spacing
+\usepackage{setspace}
 \setstretch{1.27}
 
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
+\usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
-\usepackage{multicol}
 \usepackage{caption}
+\usepackage{multicol}
 
-\usepackage{enumitem} % references
-\setlist[itemize,enumerate]{nosep} 
+\usepackage{enumitem}
+\setlist[itemize,enumerate]{nosep}
+
 \usepackage[superscript,biblabel]{cite}
-\newlength{\bibitemsep}\setlength{\bibitemsep}{.05\baselineskip plus .05\baselineskip minus .05\baselineskip}
-\newlength{\bibparskip}\setlength{\bibparskip}{0pt}
+
+\newlength{\bibitemsep}
+\setlength{\bibitemsep}{.05\baselineskip plus .05\baselineskip minus .05\baselineskip}
+\newlength{\bibparskip}
+\setlength{\bibparskip}{0pt}
+
 \let\oldthebibliography\thebibliography
-\renewcommand\thebibliography[1]{%
+\renewcommand{\thebibliography}[1]{%
   \oldthebibliography{#1}%
   \setlength{\parskip}{\bibitemsep}%
   \setlength{\itemsep}{\bibparskip}%
 }
 
-% blind footnote
-\newcommand\blfootnote[1]{%
-  \begingroup
-  \renewcommand\thefootnote{}\footnote{#1}%
-  \addtocounter{footnote}{-1}%
-  \endgroup
+\title{Title}
+\author{
+  Author\\
+  Affiliation
+  \thanks{Email address}
 }
+\date{}
 
 \begin{document}
-\pagenumbering{gobble}
 
-\large
-\begin{center}
-  Title
-\vspace{0.3cm}
-
-% Author names and affiliations
-\large
-  Author$^{*}$\blfootnote{
-$^*$Email address
-}
-\vspace{0.3cm}\\
-\small  
-  Affiliation and address\\
-\end{center}
-
-% Abstract
-
-\normalsize
+\pagestyle{empty}
+\maketitle
 
 \begin{multicols}{2}
 
-  Abstract.\cite{reference}
+Abstract text.\cite{reference}
 
-% References
 \small
-\renewcommand\refname{\vspace{-2em}}
+\renewcommand{\refname}{\vspace{-2em}}
 \begin{thebibliography}{2}
-
-\setlength{\itemsep}{0pt} 
-\setlength{\parskip}{0pt} 
-
-\bibitem{reference}
-  Author 1, Author 2, Author 3, \emph{et al.}, journal reference, year.
-
+  \bibitem{reference}
+    Author 1, Author 2, Author 3, \emph{et al.}, journal reference, year.
 \end{thebibliography}
 
 \end{multicols}
