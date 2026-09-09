@@ -9,9 +9,8 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{Candidate}
-\chead{Document}
-\rhead{\hlight{Acronym}}
+\lhead{Dr Jesús Rubio}
+\rhead{University Research Fellowship 2027}
 \cfoot{\thepage}
 
 \renewcommand{\footrulewidth}{0.4pt}
@@ -22,9 +21,18 @@
 \let\oldthebibliography\thebibliography
 \renewcommand{\thebibliography}[1]{%
   \oldthebibliography{#1}%
-  \small
+  \scriptsize
   \setlength{\itemsep}{0pt}%
   \setlength{\parskip}{\bibitemsep}%
 }
 
-\renewcommand{\refname}{\normalsize References}
+\renewcommand{\refname}{References}
+
+\usepackage{titlesec}
+
+\titleformat{name=\section,numberless}
+  {\normalsize\bfseries}
+  {}{0pt}{}
+
+\titlespacing*{name=\section,numberless}
+  {0pt}{1.5em}{0.1em}
