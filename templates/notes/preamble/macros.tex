@@ -1,0 +1,23 @@
+\newcommand{\comment}[1]{\textcolor{myred}{#1}}
+
+\makeatletter
+\newcommand*{\transpose}{%
+  {\mathpalette\@transpose{}}%
+}
+\newcommand*{\@transpose}[2]{%
+  \raisebox{\depth}{$\m@th#1\intercal$}%
+}
+\makeatother
+
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\bra}[1]{\langle #1\rvert}
+\newcommand{\ketbra}[2]{\lvert #1\rangle\!\langle #2\rvert}
+
+\newcommand{\blfootnote}[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
