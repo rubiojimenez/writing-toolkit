@@ -51,9 +51,9 @@ main.pdf
 
 are provided to allow a quick preview of the final output.
 
-I use the Libertinus typeface together with the corresponding Libertinus math font. 
+I use the Libertinus typeface together with the corresponding Libertinus math font.
 Besides liking their appearance, they are open source, widely available, and produce consistent output across Linux, macOS and Windows.
-
+For proposals and cover letters, however, I switch to sans serif to make them easier to read.
 
 ## Command-line utilities
 
