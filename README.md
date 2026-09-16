@@ -35,6 +35,7 @@ I am gradually migrating older templates to this structure.
 The document types covered are
 
 - journal articles;
+- technical notes;
 - referee responses;
 - conference abstracts;
 - abstract collections;
@@ -101,7 +102,7 @@ Additionally,
 
 ## Contributing
 
-Both suggestions and contributions of additional templates are welcome.
+Suggestions and contributions of additional templates are welcome.
 
 ## License
 
