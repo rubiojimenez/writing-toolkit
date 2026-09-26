@@ -1,34 +1,32 @@
 # Writing Toolkit
 
 Curated collection of LaTeX templates and document-building utilities for **streamlining writing**.
-
 I wrote these tools for my own use and I refine them as I go. 
-Some are still tailored to my personal workflow, but should be straightforward to adapt.
 
-The repository also includes my VSCodium setup, which I use for Python, HTML, CSS, and occasionally LaTeX and Markdown. 
+My workflow is essentially filesystem-first.
+For focused writing I use Texmaker.
+I sometimes brainstorm in Writer, as it feels more like working on paper.
+Collaborative projects tend to end up on Overleaf for convenience, although I still favour working locally with Texmaker whenever my colleagues have the patience for it.
+For Markdown and most other plain-text files I use Kate.
+For Python, HTML and CSS I use, for now, VSCodium.
+My complete VSCodium setup is included.
+Ultimately, for clear thinking, nothing replaces pen and paper.
 
-For focused writing I prefer Texmaker, while collaborative projects tend to end up on Overleaf.
-For Markdown and other plain text files I prefer Kate.
-I sometimes brainstorm in Writer because it feels more like working on paper.
-I have no automation for these workflows, so they are not represented here.
-
-At present, the repository focuses on scientific writing, though I expect it to evolve into a more general writing toolkit over time.
+While the current focus is on scientific writing, I expect the repository to evolve into a more general writing toolkit over time.
 
 ## A modular writing architecture
 
-For my LaTeX documents, I have adopted a modular preamble separating packages, configuration and macros:
+For my LaTeX documents, I have adopted a modular preamble separating packages, macros and configuration:
 
 ```text
 preamble/
-├── config.tex
+├── packages.tex
 ├── macros.tex
-└── packages.tex
+└── config.tex
 ```
 
 This makes templates easier to use and maintain. 
-
 I am gradually migrating older templates to this structure.
-
 
 ## Templates
 
@@ -49,7 +47,7 @@ main.tex
 main.pdf
 ```
 
-are provided to allow a quick preview of the final output.
+are provided for a quick preview.
 
 I use the Libertinus typeface together with the corresponding Libertinus math font.
 Besides liking their appearance, they are open source, widely available, and produce consistent output across Linux, macOS and Windows.
@@ -57,9 +55,7 @@ For proposals and cover letters, however, I switch to sans serif to make them ea
 
 ## Command-line utilities
 
-Helper scripts are also provided for automating repetitive tasks:
-
-`builddown`: Converts Markdown documents into PDF using Pandoc and XeLaTeX.
+Helper scripts are provided for automating repetitive tasks:
 
 `buildtex`: A wrapper around the standard LaTeX toolchain supporting
 
@@ -67,6 +63,8 @@ Helper scripts are also provided for automating repetitive tasks:
 - generation of files for arXiv submission;
 - project cleanup; and
 - standard compilation while retaining intermediate files.
+
+`builddown`: Converts Markdown documents into PDF using Pandoc and XeLaTeX.
 
 `gitush`: A wrapper around
 
@@ -76,15 +74,11 @@ git commit -m "<message>"
 git push
 ```
 
-It is intended for the case where everything is ready to go.
+It is intended for quick commits where all current changes are staged together.
 
 `sortbib`: Sorts BibTeX databases alphabetically by entry key and orders the fields likewise within each entry.
 
-I use this less nowadays in favour of JabRef, but it is still useful when handling BibTeX files directly.
-
-`startop`: Launches my preferred working environment. 
-
-My workflow is essentially filesystem-first, so I usually work from Dolphin, using its integrated terminal and launching external editors as needed.
+I use this less nowadays in favour of JabRef.
 
 ## Requirements
 
@@ -93,12 +87,8 @@ Depending on which templates and utilities you use, the following may be require
 - TeX Live;
 - XeLaTeX;
 - Pandoc;
-- Python 3 with the required modules; and
+- Python;
 - Git.
-
-Additionally,
-
-- `startop` requires Dolphin and VSCodium.
 
 ## Contributing
 
