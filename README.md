@@ -7,9 +7,9 @@ My workflow is essentially filesystem-first.
 For focused writing I use Texmaker.
 I sometimes brainstorm in Writer, as it feels more like working on paper.
 Collaborative projects tend to end up on Overleaf for convenience, although I still favour working locally with Texmaker whenever my colleagues have the patience for it.
-For Markdown and most other plain-text files I use Kate.
-For Python, HTML and CSS I use, for now, VSCodium.
-My complete VSCodium setup is included.
+For Python, Markdown and most other plain-text files I use Kate.
+For HTML and CSS I use VSCodium.
+My VSCodium setup as it was when I briefly used it as a general-purpose editor is included.
 Ultimately, for clear thinking, nothing replaces pen and paper.
 
 While the current focus is on scientific writing, I expect the repository to evolve into a more general writing toolkit over time.
